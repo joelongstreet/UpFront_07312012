@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 		
-		<title>reveal.js - HTML5 Presentations</title>
+		<title>Appcelerator Fundamentals</title>
 
-		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="An introduction into the Appcelerator Mobile Development Framework.">
+		<meta name="author" content="Joe Longstreet">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -336,6 +336,28 @@ class APP.Formula_Type extends APP.Formula
 							<li>Global Scope and Namespacing</li>
 						</ul>
 					</aside>
+				</section>
+
+				<section data-state="soothe">
+					<h1>More Codez</h1>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+class APP.Screen
+	constructor : (data) ->
+
+		window 				= Ti.UI.createWindow
+			title 			: 'Window Title'
+			barImage 		: APP.BG.HEADER
+		label 				= Ti.UI.createLabel
+			text 			: data.title
+		window.add label
+
+		for item data.items
+			sub_label 		= Ti.UI.createLabel
+				text  		: data.title
+			sub_label.addEventListener 'click', (e) ->
+				alert e.source
+			window.add sub_label
+					</pre></code>
 				</section>
 
 				<section data-state="soothe">
