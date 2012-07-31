@@ -1,0 +1,487 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>reveal.js - HTML5 Presentations</title>
+
+		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Appcelerator</h1>
+					<h3 class="inverted">Fundamentals</h3>
+					<img style='border:0; background:none; box-shadow:none; -webkit-box-shadow:none;' src='/lib/img/appcelerator_logo.png' />
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+
+					<aside class="notes">
+						<ul>
+							<li>Thank CremaLab</li>
+							<li>Thank Riverpoing</li>
+							<li>I've been using it for about 8, took a few products to production, working on a few more.</li>
+							<li>What is Appcelerator?</li>
+						</ul>
+					</aside>
+				</section>
+				
+				<section>
+					<h2>What we'll cover Today</h2>
+					<ul class='spaced'>
+						<li>Approaching development with Appcelerator</li>
+						<li>Moving into a New Form of Development</li>
+						<li>Structuring Mobile Applications</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Why should I choose appcelerator?</li>
+							<li>How does appcelerator work?</li>
+							<li>What skills and tools do I need?</li>
+						</ul>
+						<ul>
+							<li>How can I take my DOM or server based JavaScript skills into mobile application development?</li>
+						</ul>
+						<ul>
+							<li>What techniques/frameworks can I use to organize my code?</li>
+							<li>How complex can I really get?</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h2>Why Appcelerator?</h2>
+						<ul class='spaced'>
+							<li>Java(Coffee)Script</li>
+							<li>Cross Platform</li>
+							<li>It <em>Can Be</em> really easy!</li>
+							<li>Awesome for page based applications</li>
+							<li>Near native performance</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Page Based Applications</h1>
+						<aside class="notes">
+							<ul>
+								<li>Kitchen sink demo</li>
+								<li>Good place to get a handle of what's possible</li>
+								<li>easier than readig the API</li>
+								<li>Tab Group - Like the browser itself</li>
+								<li>Tab - Like a browser tab</li>
+								<li>Window - like a page</li>
+								<li>Window Animation</li>
+								<li>Table view</li>
+								<li>Modal</li>
+								<li>Picker</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h1>Near Native?</h1>
+						<img style='border:0; background:none; box-shadow:none; -webkit-box-shadow:none;' src='/lib/img/application_flow.png' />
+						<aside class="notes">
+							<ol>
+								<li>I don't have real evidence</li>
+								<li>Opens a web view</li>
+								<li>Creates a link between faux browser and a native application created by appcelerator</li>
+								<li>Listens for changes in browser logic and creates visual components based on results if needed</li>
+								<li>This is really similar to working with a rest API, but with visual components</li>
+							</ol>
+						</aside>
+					</section>
+
+				</section>
+
+
+				<section>
+					<h2>How does it differ from other tools?</h2>
+					<ul class='spaced'>
+						<li>Objective-C / Java</li>
+						<li>PhoneGap, jQueryMobile, MobileWeb</li>
+						<li>RareWire / XML & Document based Tools</li>
+						<li>CoronaSDK / Language Conversion</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What shouldn't I use it for?</h2>
+					<ul class='spaced'>
+						<li>Heavy graphics processing and pixel manipulation?</li>
+						<li>Game development or anything that requires an excessive amount of visual manipulation?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Can I Do This?</h2>
+					<p>Professional JavaScript Programmers not entirely required...</p>
+					<aside class="notes">
+						<ul>
+							<li>I've never coded anything - You'll die trying to make this work.</li>
+							<li>I'm a HTML/CSS Guy (or Girl) with OK JS Chops - You'll struggle but might be able to pull it off.</li>
+							<li>I'm a professioanl JavaScript programmer - Appcelerator will be a breeze and it will only take you a few days to get comfortable.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2>SetUp</h2>
+					<ul class='spaced'>
+						<li><a href='https://developer.apple.com/devcenter/ios/index.action' target='_blank'>iOS SDK</a></li>
+						<li><a href='http://developer.android.com/sdk/index.html' target='_blank'>Android SDK</a></li>
+						<li><a href='https://my.appcelerator.com/resources' target='_blank'>Titanium SDK</a></li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Register as a Apple Developer</li>
+							<li>Create deployment and provisioning profiles</li>
+							<li>Provision a number of Android Simulators</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-state="alert">
+					<h1>Moving Into Mobile Application Development</h1>
+				</section>
+
+				<section data-state="alert">
+					<h2>Changing Up Workflows</h2>
+					<ul class='spaced'>
+						<li>There is no DOM!</li>
+						<li>Appcelerator uses a web browser for business logic</li>
+						<li>Transitioning from Backbone, Sproutcore...</li>
+						<li>Don't use the IDE</li>
+					</ul>
+				</section>
+
+				<section data-state="alert">
+					<section data-state="alert">
+						<h1>Dirty DOMming</h1>
+						<p>Do not tie data directly into your interface elements</p>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&#60;div class='users'&#62;
+	&#60;div class='user'&#62;
+		&#60;div class='name'&#62; Joe &#60;/div&#62;
+		&#60;div class='attributes'&#62;
+			&#60;div class='age'&#62; 26 &#60;/div&#62;
+			&#60;div class='gender'&#62; Male &#60;/div&#62;
+		&#60;/div&#62;
+	&#60;/div&#62;
+	...
+&#60;/div&#62;
+						</code></pre>
+					</section>
+					<section data-state="alert">
+						<h1>jQuery</h1>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+for user in $('.users')
+	if parseInt(user.find('.age')) > 21
+		alert 'of age!'
+						</code></pre>
+					</section>
+					<section data-state="alert">
+						<h1>Appcelerator</h1>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+users = e.source.getChildren()
+for user in users
+	attrs = user.getChildren()
+	for attr in attrs
+		if attr.type == 'age'
+			if parseInt(attr.value) > 21
+				alert 'of age'
+						</code></pre>
+					</section>
+					<section data-state="alert">
+						<h1>A Better Way</h1>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+&#60;div class='users'&#62;
+	&#60;div class='user' data-user=user() &#62;
+		&#60;div class='name'&#62; Joe &#60;/div&#62;
+		&#60;div class='attributes'&#62;
+			&#60;div class='age'&#62; user.get_name() &#60;/div&#62;
+			&#60;div class='gender'&#62; user.get_gender() &#60;/div&#62;
+		&#60;/div&#62;
+	&#60;/div&#62;
+	...
+&#60;/div&#62;
+						</code></pre>
+				</section>
+					<aside class="notes">
+						<ul>
+							<li>Data attached directly to an interface element should be minimal.</li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+				<section data-state="alert">
+					<h1>Attaching Event Listeners</h1>
+					<aside class="notes">
+						<ul>
+							<li>it's a bit buggyish</li>
+							<li>it attaches events to all parent elements which are not the window.</li>
+							<li>Usually mobile interfaces are pretty simple so it's not really a big deal but can come up on occasion.</li>>
+						</ul>
+					</aside>
+				</section>
+
+				
+				<section data-state="soothe">
+					<h1>Structuring an Application</h1>
+					<aside class="notes">
+						<ul>
+							<li>Appcelerator doesn't give you a way to write apps</li>
+							<li>My personal opinion on the subject</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-state="soothe">
+					<h1>Directory Structure</h1>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+App Root
+|
+--> Build
+--> Resources
+	|
+	--> app.js
+	--> lib
+		|
+		--> logic.js
+	--> src
+		|
+		--> logic.coffee
+	--> android/iphone
+		|
+		--> image assets
+
+					</code></pre>
+				</section>
+
+				<section data-state="soothe">
+					<h1>Application Loader</h1>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+var APP = {}
+
+/*** Data Sources ***/
+Ti.include('data/some data.js');
+/*** ---------- ***/
+
+/*** Utilities ***/
+Ti.include('lib/utilities and or styles.js');
+/*** ---------- ***/
+
+/*** Class Includes ***/
+Ti.include('lib/Formula.js');
+/*** ---------- ***/
+
+/*** Controller ***/
+Ti.include('lib/controller.js');
+/*** ---------- ***/
+					</code></pre>
+				</section>
+
+				<section data-state="soothe">
+					<h1>Codez</h1>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+class APP.Formula
+	create_base_elements : (window) ->
+		button 				= Ti.UI.createButton
+			image 			: APP.ICONS.STAR
+			width 			: APP.WIDTH*.075
+			height 			: APP.WIDTH*.075
+			backgroundImage		: 'none'
+		window.add button
+
+
+class APP.Formula_Type extends APP.Formula	
+	initialize : ->
+		window = Ti.UI.createWindow()
+		@create_base_elements window
+
+					</code></pre>
+
+					<aside class="notes">
+						<ul>
+							<li>Compiling takes time</li>
+							<li>CoffeeScript will notify you of syntax errors immediately</li>
+							<li>Global Scope and Namespacing</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-state="soothe">
+					<h1>Common JS Modules</h1>
+					<h3>Definition</h3>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+exports.createFormValidator = (o) ->
+	...
+					</code></pre>
+					<h3>Require</h3>
+					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">
+require('vendor/form_validator').createFormValidator
+	text_fields 	: text_fields,
+	data 		: data
+					</code></pre>
+					
+				</section>
+
+				<section data-state="soothe">
+					<h2>How complex can I really get?</h2>
+					<ul class="spaced">
+						<li>Create custom data models that respond to change</li>
+						<li>Gyroscope/Accelerometer</li>
+						<li>Particle Generation</li>
+						<li>Web Socket Integration</li>
+						<li>Mobile Payment Gateway</li>
+						<li>Device + Application State</li>
+						<li>Custom Model and Controller Interaction</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Beer Builder : Create models that intuitively respond to change, much like Backbone</li>
+							<li>Ampd : Gyroscope/Accelerometer, Particle generation, web socket integration, mobile payment gateway with a cart</li>
+							<li>CellErEe : Perform tasks based on a combination of application and device state</li>
+							<li>EZ-Med : Custom model definitions</li>
+					</aside>
+				</section>
+
+				<section data-state="soothe">
+					<h1>The Non-"native" development stigma</h1>
+					<aside class="notes">
+						<ul>
+							<li>Objective-c / Java will give you the absolute best performance because you are as close to the hardware as you can get.</li>
+							<li>Think of this like interacting with a REST API. You have every component documented, can you do everything you want with those componenets? If yes, you're golden. </li>
+							<li>Nobody cares...</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h1>Getting Help</h1>
+					<ul class="spaced">
+						<li>Q&A Forums are hosted by Appcelerator</li>
+						<li>Stack Overflow</li>
+						<li>Lynda.com & Other External TutSites</li>
+						<li>Proprietary Paid services</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Common Issues</h1>
+					<ul class="spaced">
+						<li>2.1 == Beta… or maybe Alpha</li>
+						<li>Missing Error Messaging</li>
+						<li>OMG WTF, NOTHING WORKS!</li>
+						<li>Apple/Android Deployment Issues</li>
+					</ul>
+				</section>
+
+				<section data-state="alert">
+					<h1>Not so opensource</h1>
+					<ol class="spaced">
+						<li>Create a ticket in their bug tracking sytem</li>
+						<li>Create a signed CLA</li>
+						<li>Write a series of test cases</li>
+						<li>Update the Docs</li>
+					</ol>
+				</section>
+				
+				<section data-state="soothe">
+					<h1>Questions?</h1>
+					<h3 class="inverted">BY Joe Longstreet</h3>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+
+		<script>
+			// Load reveal.js as well as a classList polyfill if needed
+			head.js( !document.body.classList ? 'lib/js/classList.js' : null )
+				.js( 'js/reveal.js', function() {
+
+				// Parse the query string into a key/value object
+				var query = {};
+				location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+					query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+				} );
+
+				// Fires when a slide with data-state=customevent is activated
+				Reveal.addEventListener( 'customevent', function() {
+					console.log( '"customevent" has fired' );
+				} );
+
+				// Fires each time a new slide is activated
+				Reveal.addEventListener( 'slidechanged', function( event ) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+				} );
+
+				// Full list of configuration options available here:
+				// https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					controls: true,
+					progress: true,
+					history: true,
+					
+					theme: query.theme || 'default', // default/neon/beige
+					transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+				});
+
+			} );
+			
+			// Load highlight.js for syntax highlighting of code samples
+			head.js( 'lib/js/highlight.js', function() { 
+				hljs.initHighlightingOnLoad(); 
+			} );
+
+			// If we're runnning the notes server we need to include some additional JS
+			// TODO Is there a better way to determine if we're running the notes server?
+			if( window.location.host === 'localhost:1947' ) {
+				head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
+			}
+		</script>
+		
+	</body>
+</html>
